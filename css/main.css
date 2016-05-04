@@ -1,0 +1,327 @@
+@charset "utf-8";
+*{
+    margin:0;
+    padding:0;
+    font-size:12px;
+
+}
+body{
+    background-color: lightgray;
+}
+
+.top{
+    width:100%;
+    height:27px;
+    background-color:#eeeeee;
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 1;
+
+}
+
+.top-content{
+    margin:0px auto;
+    width:1000px;
+    height:27px; /*如果不加本句，由于包含的元素浮动，常规流中无元素，导致height为0*/
+
+}
+
+.top-content li{
+    float:right;
+    margin:0 12px;
+    line-height:27px;
+
+}
+
+.top-content ul{
+    list-style:none;
+}
+.top-content a:link , .top-content a:visited{
+    color: darkgray;
+    text-decoration: none;
+}
+
+.top-content a:hover , .top-content a:active{
+    color:red;
+    text-decoration:none;
+}
+
+.wrap{
+    background-color:white;
+    width:1000px;
+    margin:0 auto;
+    margin-top:28px;
+}
+
+.logo  /*宽度和父元素同*/
+{
+    height: 80px;
+
+
+}
+
+.logo_left{
+    float: left;
+    width:200px;
+    height:80px;
+}
+
+.logo_right{
+    margin-top:40px;
+    margin-right:10px;
+    float: right;
+}
+.logo_right img{
+    margin-right:5px;
+    vertical-align: middle;
+}
+
+.logo_right span{
+    color: red;
+    font-family:微软雅黑,宋体;
+    font-size:16px;
+}
+
+.nav_left{
+    background: url("../images/nav_left.jpg") no-repeat;
+    height:40px;
+    width:10px;
+    float: left;
+}
+.nav_right{
+    background: url("../images/nav_right.jpg") no-repeat;
+    height:40px;
+    width:10px;
+    float: left;
+
+}
+.nav_middle{
+    height:40px;
+    width:980px;
+    background: url("../images/nav_bg.jpg") repeat-x;
+    float: left;
+}
+
+.nav_mid_left{
+    float:left;
+    width:680px;
+    
+}
+
+.nav_mid_right{
+    float: left;
+    width:300px;
+    height: 40px;
+
+}
+.nav_mid_left li{
+    float:left;
+    list-style-position: inside;
+    list-style-type: none;
+    width:100px;
+    text-align: center;
+    line-height:40px;
+
+
+
+}
+.nav_mid_left a:link,.nav_mid_left a:visited{
+    font-size:16px;/*如果在li中设置，则不能达到效果——链接有特殊性，a标签里的文字不算是li里的*/
+    color:white;
+    font-family:微软雅黑;
+    text-decoration: none;
+}
+
+.nav_mid_left a:active,.nav_mid_left a:hover{
+    font-size:16px;
+    color: aquamarine;
+    font-family:微软雅黑;
+    text-decoration: none;
+}
+
+.nav_mid_right input{
+    width:200px;
+    height:25px;/*border上下共5px*/
+    border-color: white;
+    padding-right: 25px;
+    margin:5px auto;
+    background:white right center no-repeat url("../images/search.jpg")
+
+}
+
+.ad{
+    overflow: hidden;
+    height:415px;
+    width:982px;
+    background-color:black;
+}
+
+.main{
+    clear: both; /*Elements after the floating element will flow around it. To avoid this, use the clear property.*/
+    height:200px;
+    width:1000px;
+
+}
+
+.news{
+    height:200px;
+    width:330px;
+    float:left;
+    border:solid 1px gray;
+}
+.course{
+    height:200px;
+    width:420px;
+    float:left;
+    border:solid 1px gray;
+}
+.sideBar{
+    height:200px;
+    width:244px;
+    float: left;
+    border:solid 1px gray;
+}
+
+.picNews img,.coursePic img{
+    float:left;
+    vertical-align: middle;
+    margin:5px;
+
+}
+.picNews p,.coursePic p{
+    float:left;
+}
+.picNews h1,.coursePic h1{
+    font-size:20px;
+    line-height: 30px;
+    text-indent:5px;
+}
+
+.picNews a,.coursePic a{
+    color: red;
+    text-decoration: none;
+}
+.picNews span,.coursePic span{
+    line-height:18px;
+    display: block;
+    /*此处不能设置浮动，因为会因为盒子太大导致文字不能环绕在图片旁边*/
+    margin-left:10px;
+}
+.coursePic span{
+    text-indent:2em;
+
+}
+.newsList{
+    clear:both;
+}
+.newsList ul{
+    list-style:none;
+}
+
+.newsList a:link,.newsList a:visited{
+    color:black;
+    text-decoration: none;
+    line-height:16px;
+}
+
+.newsList a:hover , .newsList a:active{
+    color: red;
+    text-decoration:none;
+    line-height:16px;
+}
+
+.newsList span{
+    color:gray;
+    float:right;
+    padding-right:2px;
+}
+
+.newsTitle{
+    height:30px;
+    color:lightgray;
+    border-bottom:solid 1px;
+}
+
+.newsTitle h1{
+    font-size:20px;
+    float:left;
+    line-height:30px;
+    text-indent:5px;
+
+}
+
+.newsTitle a:link,.newsTitle a:visited{
+    font-size:16px;
+    float:right;
+    line-height:30px;
+    padding-right:10px;
+    text-decoration: none;
+    color: lightgray;
+}
+
+.courseType ul{
+    list-style: none;
+    margin:20px;
+
+}
+
+.courseType li{
+    font-size:16px;
+    font-weight: bold;
+    float:left;
+    margin:0 7px;
+    background-color:gray;
+    color: white;
+    padding: 2px;
+}
+
+.vedioName{
+    background-color:black;
+    color:white;
+    height:18px;
+    width:244px;
+    margin-top:-2px;
+    text-align: center;
+}
+
+.bottom{
+    width:100%;
+    height:200px;
+    background:#eeeeee;
+    clear: both;
+    margin-top:3px;
+}
+
+.bottomContent{
+    width:1000px;
+    margin:0 auto;
+    padding-top:20px;
+    height: 160px;
+}
+
+.bottomContent h1{
+    line-height: 30px;
+    font-size:16px;
+    color:gray;
+}
+.bottomContent li{
+    width:200px;
+    float:left;
+    list-style:none;
+    text-align: center;
+    line-height: 30px;
+    background: url("../images/line.png") right center no-repeat;
+
+}
+
+.bottomContent a{
+    text-decoration: none;
+    color:gray;
+}
+
+#returnTop{
+    position: fixed;
+    bottom:200px;
+    right:80px;
+}
